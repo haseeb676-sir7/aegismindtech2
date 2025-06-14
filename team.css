@@ -1,0 +1,104 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+}
+
+/* Navigation styles (same as styles.css) */
+nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a {
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+/* Team specific styles */
+.team-member {
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active a {
+        padding: 0.75rem 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Team grid adjustments for mobile */
+    .team-member {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Hover effects */
+.social-links a {
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #3B82F6;
+}
+
+/* Container */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-member {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.team-member:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.team-member:nth-child(3) {
+    animation-delay: 0.4s;
+} 
